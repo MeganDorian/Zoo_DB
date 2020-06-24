@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "animals.nickname",
+      "type": "java.lang.String",
+      "description": "Description for animals.nickname."
+    },
+    {
+      "name": "animals.breed",
+      "type": "java.lang.String",
+      "description": "Description for animals.breed."
+    }
+  ] }

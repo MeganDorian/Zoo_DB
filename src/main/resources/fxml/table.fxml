@@ -1,69 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Pagination?>
-<?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableController">
-    <GridPane layoutX="67.0" layoutY="210.0" prefHeight="91.0" prefWidth="746.0" AnchorPane.bottomAnchor="0.0"
-              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="db.controllers.TableController">
+    <GridPane layoutX="67.0" layoutY="210.0" prefHeight="91.0" prefWidth="746.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
         <MenuBar prefHeight="0.0" prefWidth="557.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS"
                  GridPane.valignment="TOP" GridPane.vgrow="NEVER">
-            <menus>
-                <Menu mnemonicParsing="false" onAction="#animalsAction" text="Животные"/>
-                <Menu mnemonicParsing="false" onAction="#staffAction" text="Сотрудники"/>
-                <Menu mnemonicParsing="false" onAction="#medicalAidsAction" text="Медицинская помощь"/>
-                <Menu mnemonicParsing="false" onAction="#zooAction" text="Зоопарк"/>
-                <Menu fx:id="refBooks" mnemonicParsing="false" text="Справочники">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#motherlandsAction" text="Родины животных"/>
-                        <MenuItem mnemonicParsing="false" onAction="#classesAction" text="Классы животных"/>
-                        <MenuItem mnemonicParsing="false" onAction="#speciesAction" text="Виды животных"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" onAction="#jobsAction" text="Должности сотрудников"/>
-                        <MenuItem mnemonicParsing="false" onAction="#helpTypesAction"
-                                  text="Виды медицинской помощи"/>
-                        <MenuItem mnemonicParsing="false" onAction="#citiesAction" text="Города"/>
-                        <MenuItem mnemonicParsing="false" onAction="#propertyTypesAction"
-                                  text="Типы собственности"/>
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" onAction="#exitAction" text="Выход"/>
-            </menus>
+            <Menu mnemonicParsing="false" onMenuValidation="#animalsAction" text="Животные"/>
+            <Menu mnemonicParsing="false" onAction="#staffAction" text="Сотрудники"/>
+            <Menu mnemonicParsing="false" onAction="#medicalAidsAction" text="Медицинская помощь"/>
+            <Menu mnemonicParsing="false" onAction="#zooAction" text="Зоопарк"/>
+            <Menu fx:id="refBooks" mnemonicParsing="false" text="Справочники">
+                <MenuItem mnemonicParsing="false" onAction="#motherlandsAction" text="Родины животных"/>
+                <MenuItem mnemonicParsing="false" onAction="#classesAction" text="Классы животных"/>
+                <MenuItem mnemonicParsing="false" onAction="#speciesAction" text="Виды животных"/>
+                <SeparatorMenuItem mnemonicParsing="false"/>
+                <MenuItem mnemonicParsing="false" onAction="#jobsAction" text="Должности сотрудников"/>
+                <MenuItem mnemonicParsing="false" onAction="#helpTypesAction" text="Виды медицинской помощи"/>
+                <MenuItem mnemonicParsing="false" onAction="#citiesAction" text="Города"/>
+                <MenuItem mnemonicParsing="false" onAction="#propertyTypesAction" text="Типы собственности"/>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#exitAction" text="Выход"/>
         </MenuBar>
         <GridPane GridPane.rowIndex="1">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
         </GridPane>
-        <Pagination maxPageIndicatorCount="5" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2"/>
-        <TableView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
-            <columns>
-                <TableColumn prefWidth="75.0" text="C1"/>
-                <TableColumn prefWidth="75.0" text="C2"/>
-            </columns>
-        </TableView>
+        <Pagination fx:id="pagination" maxPageIndicatorCount="5" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+           <!-- <fx:define>
+                <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                    <placeholder>
+                        <Label text="No search results found." />
+                    </placeholder>
+                    <columns>
+                        <TableColumn prefWidth="75.0" text="C1" />
+                    </columns>
+                </TableView>
+            </fx:define>-->
+        </Pagination>
     </GridPane>
 </AnchorPane>
